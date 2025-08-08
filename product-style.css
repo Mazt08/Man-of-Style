@@ -1,0 +1,354 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Libre+Baskerville&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Libre+Baskerville&family=Montserrat:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.logo {
+  height: 63px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #ececec;
+}
+
+.navbar {
+  background: #FFD5D5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mx-auto {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  border-radius: 26px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 700px;
+  height: 43px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #202a95;
+  outline: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+@media (max-width: 650px) {
+  .search-input {
+    height: 60px;
+    width: 200px; /* Adjust width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    max-height: 100%;
+  }
+}
+
+/*Nav*/
+.nav-link,
+.navbar-brand {
+  color: #1f299c;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.nav-link:hover {
+  color: #0f1663;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/*Carousel*/
+.grid-container2 {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.carousel {
+  max-width: 75%; /* Set a max-width for the carousel */
+  width: 100%; /* Ensure it takes full width of its container */
+  max-height: 900px;
+  height: 100%;
+}
+
+.carousel-inner {
+  margin: 0; /* Remove any default margin from inner elements */
+}
+
+.carousel-item img {
+  display: block; /* Ensure images are block elements */
+  margin: 0 auto; /* Center images horizontally if needed */
+}
+
+/*Header*/
+.header {
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 450px;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.description h1 {
+  color: #ffffff;
+  font-family: "Manrope", Helvetica;
+  font-weight: bold;
+  font-size: 75px;
+}
+
+.description p {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/*Footer*/
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+
+.page-footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-footer h6 {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.page-footer p {
+  line-height: 1.6;
+}
+
+.footer-copyright {
+  color: #666;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/*Icon*/
+.fa-solid {
+  color: #FF6262;
+}
+
+.fa-solid:hover {
+  color: #FFA6A6;
+  transition: 0.3s ease;
+}
+
+.p {
+  font-family: "Sora", helvetica;
+}
+
+/*Produts*/
+/*
+
+
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+  }
+  
+  .product-card {
+    height: 220px;
+    width: 180px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+
+  .product-image {
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    }
+    
+    .product-info {
+    padding: 17px;
+    justify-content: center;
+    }
+
+  .product-info h2 {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+  }
+
+  #psu img{
+    width: 100px;
+    height: 100px;
+  }
+*/
+
+.product-grid {
+  display: flex; /* Use flexbox for better control */
+  justify-content: center; /* Center the carousel */
+  overflow: hidden; /* Prevent overflow */
+  padding: 20px; /* Optional padding */
+  padding-top: 0;
+}
+
+.product-container {
+  width: 100%; /* Make sure it takes full width */
+  max-width: 1290px; /* Limit max width for larger screens */
+  position: relative;
+}
+
+.product-wrapper {
+  display: flex; /* Ensure items are in a row */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.product-card {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  height: 300px !important; /* Keep height consistent */
+  width: 200px !important; /* Set fixed width */
+  margin-right: 10px; /* Space between items */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; /* Change to your desired color */
+  z-index: 10; /* Ensure they are above other elements */
+  transition: color 0.3s; /* Optional: smooth transition */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #5372F0; /* Change color on hover */
+}
+
+.product-list .product-card {
+  list-style: none;
+}
+
+.product-list .product-card .product-link {
+  user-select: none;
+  display: block;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.product-list .product-card .product-link:hover {
+  border-color: #5372F0;
+}
+
+.product-list .product-link .product-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-list .product-link .badge {
+  color: #5372F0;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.product-list .product-link .product-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+  .description {
+    left: 0;
+    padding: 0 15px;
+    position: absolute;
+    top: 10%;
+    transform: none;
+    text-align: center;
+  }
+
+  .description h1 {
+    font-size: 2em;
+  }
+
+  .description p {
+    font-size: 1.2rem;
+  }
+
+  .header {
+    height: 50vh;
+  }
+
+  .features {
+    margin: 0;
+  }
+}

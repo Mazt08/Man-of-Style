@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Azul Cosmetics</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="Azul.ico">
+</head>
+<body>
+    <!-- Combined Login and Header Section -->
+    <header class="page-header header container-fluid">
+        <div class="overlay"></div>
+
+        <!-- Login Section -->
+        <div class="login-container">
+            <div class="container">
+                <h1>Log In</h1> 
+                <form action="login.php" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group position-relative">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required>
+                        <span class="show-password position-absolute" style="top: 35px; right: 15px; cursor: pointer;" onclick="togglePasswordVisibility()">
+                            <i class="fa fa-eye"></i>
+                        </span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">LOG IN</button>
+                    <div class="forgot-password text-center mt-2">
+                        <a href="#">Forgot Password</a>
+                    </div>
+                </form>
+                <div class="signup-link text-center mt-3">
+                    <span>New to Azul Cosmetics?</span> <a href="azul-registration.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="index.php">
+            <img src="azul-logo.png" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Need help?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--This is the page footer-->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">About Azul:</h6>
+                    <p>At Azul, we believe beauty begins with confidence. We are a proudly local beauty shop offering a wide range of high-quality cosmetics and self-care products for every personality and style. From eye-catching eyeliners to nourishing skincare, bold lip colors to everyday hair essentials, Azul is your one-stop destination for everything beauty.</p>
+                    <p>Our curated collections are designed to help you express yourself freely and feel beautiful in your own skin every day, any time. Whether you're perfecting your brows, adding a pop of blush, or simply caring for your skin, Azul is here to glow with you.</p>
+                    <p>Explore beauty. Embrace confidence. Only at Azul.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <p>936a R-6, Project 3, Quezon City, 1014 Metro Manila<br /> azulcosmetics@gmail.com
+                        <br /> +63 915 048 2884<br /> +63 995 100 6601</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">
+            © 2025 Copyright: azulcosmetics.com
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src='login-js.js'></script>
+
+    <!-- Prevent Back Navigation Script -->
+    <script>
+        // Prevent going back to the previous page
+        window.history.pushState(null, '', window.location.href);
+        window.onpopstate = function() {
+            window.history.pushState(null, '', window.location.href);
+        };
+    </script>
+
+</body>
+</html>

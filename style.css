@@ -1,0 +1,728 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Libre+Baskerville&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Libre+Baskerville&family=Montserrat:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.logo {
+  height: 63px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #ececec;
+  color: #fff;
+  background-image: url('background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.navbar {
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Position it at the top of the page */
+  width: 100%; /* Full-width navbar */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  background: #FFD5D5; /* Re-apply the background color since fixed elements may override it */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopNOW:hover{
+background-color: white;
+background-color: transparent;
+  border: 1px solid white;
+  width: 150px;
+  height: 50px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+
+}
+
+.shopNOW{
+  background-color: transparent;
+    border: 1px solid white;
+    width: 150px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.mx-auto {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  border-radius: 26px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 700px;
+  height: 43px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #1f299c;
+  outline: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+@media (max-width: 650px) {
+  .search-input {
+    height: 60px;
+    width: 200px; /* Adjust width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .description {
+    left: 0;
+    padding: 0 15px;
+    position: absolute;
+    top: 10%;
+    transform: none;
+    text-align: center;
+  }
+
+  .description h1 {
+    font-size: 2em;
+  }
+
+  .description p {
+    font-size: 1.2rem;
+  }
+
+  .features {
+    margin: 0;
+  }
+}
+
+/*Nav*/
+.nav-link,
+.navbar-brand {
+  color: #1f299c;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.nav-link:hover {
+  color: #0f1663;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/*Carousel*/
+.grid-container2 {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.carousel {
+  max-width: 75%; /* Set a max-width for the carousel */
+  width: 100%; /* Ensure it takes full width of its container */
+  max-height: 900px;
+  height: 100%;
+}
+
+.carousel-inner {
+  margin: 0; /* Remove any default margin from inner elements */
+}
+
+.carousel-item img {
+  display: block; /* Ensure images are block elements */
+  margin: 0 auto; /* Center images horizontally if needed */
+}
+
+/*Header*/
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  position: relative;
+  height: 720px; /* Adjust this to match the image height */
+  overflow: hidden;
+}
+
+.title h2 {
+  font-family: 'Inter', sans-serif;
+  color: black;
+  text-align: center;
+  margin-top: 40px; /* Adjust spacing below the image */
+  font-size: 24px; /* Adjust font size as needed */
+  z-index: 2;
+  position: relative;
+}
+
+.gradient-underline {
+  width: 320px; /* Adjust width */
+  height: 10px;  /* Adjust height */
+  margin: 10px auto 0; /* Center it below the text */
+  background: linear-gradient(90deg, #F78F3F 0%, #ED312F 50%, #9E3E97 100%);
+  border-radius: 50%;
+  filter: blur(1px); /* Optional: softens the edges slightly */
+}
+
+/*Footer*/
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+
+.page-footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-footer h6 {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.page-footer p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.footer-copyright {
+  color: #666;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/*Icon*/
+.fa-solid {
+  color: #FF6262;
+}
+  
+.fa-solid:hover {
+  color: #FFA6A6;
+  transition: 0.3s ease;
+}
+
+.fa-regular {
+  color: white;
+}
+
+.fa-regular {
+  color: #ff851b;
+  transition: 0.3s ease;
+}
+
+.p {
+  font-family: "Sora", helvetica;
+}
+
+.add-to-cart-btn .fa-solid {
+  color: #000;
+}
+
+/*Produts*/
+.product-grid {
+  display: flex; /* Use flexbox for better control */
+  justify-content: center; /* Center the carousel */
+  overflow: hidden; /* Prevent overflow */
+  padding: 20px; /* Optional padding */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.product-container {
+  width: 100%; /* Make sure it takes full width */
+  max-width: 1290px; /* Limit max width for larger screens */
+  position: relative;
+}
+
+.product-wrapper {
+  display: flex; /* Ensure items are in a row */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.product-card {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  height: 300px !important; /* Keep height consistent */
+  width: 200px !important; /* Set fixed width */
+  margin-right: 10px; /* Space between items */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #848fee; /* Change to your desired color */
+  z-index: 10; /* Ensure they are above other elements */
+  transition: color 0.3s; /* Optional: smooth transition */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #5372F0; /* Change color on hover */
+}
+
+.product-list .product-card {
+  list-style: none;
+}
+
+.product-list .product-card .product-link {
+  user-select: none;
+  display: block;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+  background-color: #fff;
+}
+
+.product-list .product-card .product-link:hover {
+  border-color: #000;
+}
+
+.product-list .product-link .product-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-list .product-link .badge {
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #000;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.badge {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.product-list .product-link .product-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Product Endorsement */
+.endorsement-grid {
+  display: flex; /* Use flexbox for better control */
+  justify-content: center; /* Center the endorsement section */
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #FFD5D5;
+}
+
+.endorsement-header {
+  color: black;
+  background-size: cover;
+  width: 100%;    
+  display: flex; /* Use flex to align items in a row */
+  justify-content: space-around; /* Space out the containers */
+  padding: 10px; /* Added padding to the header */
+}
+
+.endorsement-container1,
+.endorsement-container2 {
+  position: relative; /* Required for absolute positioning of overlay */
+  width: 675px; /* Fixed width */
+  height: 580px; /* Fixed height */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow: hidden; /* Prevent overflow */
+  margin: 20px; /* Margin for spacing */
+  padding: 30px;
+  padding-top: 20px;
+}
+
+.endorsement-container1 {
+  background-image: url('images/endorsement-container1.jpg');
+  background-size: cover; /* Ensure the image covers the container */
+}
+
+.endorsement-container2 {
+  background-image: url('images/endorsement-container1.jpg');
+  background-size: cover; /* Ensure the image covers the container */
+}
+
+.endorsement-overlay {
+  position: absolute;
+  height: 100%; /* Cover the full height of the container */
+  width: 100%; /* Cover the full width of the container */
+  left: 10;
+  top: 10;
+  background: rgba(0, 0, 0, 0.10); /* White background with lower opacity */
+  z-index: 1; /* Make sure the overlay is at the top but doesn't touch the objects */
+}
+
+.endorsement-wrapper {
+  display: flex; /* Flex layout for horizontal alignment */
+  overflow: hidden; /* Prevent overflow */
+  height: 100%; /* Allow wrapper to fill container */
+  position: relative; /* Needed for positioning child elements */
+}
+
+.endorsement-list {
+  display: flex; /* Ensure items are in a row */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  height: 100%; /* Match the container height */
+}
+
+.endorsement-card {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  height: 300px; /* Keep height consistent */
+  width: 200px; /* Set fixed width */
+  margin-right: 10px; /* Space between items */
+}
+
+.endorsement-list .endorsement-card {
+  list-style: none; /* Remove bullet points */
+}
+
+.endorsement-link {
+  user-select: none;
+  display: block;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none; /* Remove underline from links */
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+  background-color: #fff; /* Set product card background color to white */
+  position: relative; /* To ensure z-index works */
+  z-index: 2; /* Ensure links are above the overlay */
+}
+
+.endorsement-link:hover {
+  border-color: #5372F0; /* Change border color on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+.endorsement-image {
+  width: 100%; /* Ensure images take full width */
+  height: auto; /* Allow height to auto adjust */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Cover the image */
+  border-radius: 10px; /* Round corners */
+}
+
+.endorsement-list .endorsement-link .badge {
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #000;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.endorsement-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Swiper button styles */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #848fee; /* Button color */
+  z-index: 10; /* Ensure buttons are above other elements */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #5372F0; /* Change color on hover */
+}
+
+.endorsement-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.product-price {
+  color: #000;
+  font-size: 1.15rem;
+  text-decoration: none; /* Ensure no underline for the product price */
+  font-weight: 350;
+}
+
+/* Button container */
+.endorsement-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px; /* Space above buttons */
+  align-items: center; /* Ensure buttons are vertically aligned */
+}
+
+/*Suggested Products*/
+.suggested-grid {
+  display: flex; /* Use flexbox for better control */
+  justify-content: center; /* Center the carousel */
+  overflow: hidden; /* Prevent overflow */
+  padding: 20px; /* Optional padding */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.suggested-container {
+  width: 100%; /* Make sure it takes full width */
+  max-width: 1470px; /* Limit max width for larger screens, it adjusts the coverage of the list on how many items it can view*/
+  position: relative;
+}
+
+.suggested-wrapper {
+  display: flex; /* Ensure items are in a row */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.suggested-card {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  height: 340px !important; /* Keep height consistent */
+  width: 230px !important; /* Set fixed width */
+  margin-right: 10px; /* Space between items */
+}
+
+.suggested-list .suggested-card {
+  list-style: none;
+}
+
+.suggested-list .suggested-card .suggested-link {
+  user-select: none;
+  display: block;
+  padding: 18px;
+  padding-top: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+  background-color: #fff;
+}
+
+.suggested-list .suggested-card .suggested-link:hover {
+  border-color: #5372F0;
+}
+
+.suggested-list .suggested-link .suggested-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.suggested-list .suggested-link .badge {
+  color: #000;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.badge {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.suggested-list .suggested-link .suggested-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.suggested-price {
+  color: #000;
+  font-size: 1.15rem;
+  text-decoration: none; /* Ensure no underline for the product price */
+  font-weight: 350;
+}
+
+.suggested-header {
+  background-color: white;
+  background-size: cover;
+  width: 100%;    
+  display: flex; /* Use flex to align items in a row */
+  justify-content: space-around; /* Space out the containers */
+  padding: 10px; /* Added padding to the header */
+}
+
+.suggested-products {
+  margin: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.suggested-wrapper {
+  display: flex; /* Ensure items are in a row */
+  overflow: hidden; /* Prevent overflow */
+  height: 420px; /*Adjust the cut off at the bottom*/
+}
+
+.sug-pos{
+  margin: 20px 0 20px 230px; /*t,r,b,l*/
+}
+
+.sug-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  position: sticky; /* Make the title stick to its position */
+  top: 0; /* Set it to stick at the top of its container */
+  padding-right: 100px;
+}
+
+@media (max-width: 768px) {
+  .sug-title {
+    padding-right: 100px; /* Reduce padding on smaller screens */
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+  }
+  .sug-pos {
+    padding-right: 100px; /* Reduce padding on smaller screens */
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Buy Now button styling */
+.buy-now-btn {
+  flex: 1; /* Allow the button to take up remaining space */
+  padding: 8px 16px; /* Increase padding for a larger look */
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #405bc9;
+}
+
+/* Add to Wishlist button styling */
+.add-to-wishlist {
+  background-color: #f0f0f0;
+  color: #000;
+  width: 40px; /* Fixed width for a compact look */
+  height: 40px; /* Match height with add-to-cart buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-wishlist2 {
+  color: #d4d2d2;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Ensure it is positioned explicitly */
+  z-index: 10; /* Bring above other elements */
+  left: 185px;
+  top: 15px;
+  pointer-events: auto; /* Ensure it can be clicked */
+}
+
+.add-to-wishlist2 i {
+  font-size: 1.25rem; /* Adjust icon size */
+  color: #d4d2d2;
+}
+
+.add-to-wishlist2:hover i {
+  color: #ff5757;
+}
+
+/* Active state for the wishlist button */
+.add-to-wishlist2.active {
+  background-color: #ffcccc !important; /* Change to a preferred active color */
+  color: #fff !important; /* Adjust text/icon color */
+}
+
+.add-to-wishlist2.active i {
+  color: #ff5757 !important; /* Icon color for active state */
+}
+
+.suggested-link {
+  display: block;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Lower than the button to avoid overlap */
+}
+
+.suggested-card {
+  position: relative; /* Create a reference for child elements like the button */
+  flex: 0 0 auto; /* Prevent shrinking */
+  height: 340px !important; /* Consistent height */
+  width: 230px !important; /* Fixed width */
+  margin-right: 10px; /* Space between items */
+}
+
+/* Add to Cart button styling */
+.add-to-cart-btn {
+  z-index: 5;
+  background-color: #f0f0f0;
+  color: #000;
+  width: 40px; /* Fixed width for a compact look */
+  height: 40px; /* Match height with add-to-cart buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
