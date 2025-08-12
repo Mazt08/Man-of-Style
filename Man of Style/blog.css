@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,500;1,300&display=swap");
+
+:root {
+  --gray-darker: #222222;
+  --gray-dark: #333333;
+  --gray-medium: #555555;
+  --gray-light: #cccccc;
+  --gray-lighter: #eeeeee;
+  --gray-ultralight: #f8f8f8;
+  --accent-color: #666666;
+}
+
+/* General Reset */
+body {
+  background-color: var(--gray-ultralight);
+  color: var(--gray-darker);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Navigation
+=============================== */
+.navbar {
+  padding: 15px 0;
+
+  background-size: cover;
+  background-color: rgba(248, 248, 248, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.navbar-brand img {
+  width: 120px;
+  height: auto;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--gray-dark) !important;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--gray-medium) !important;
+}
+
+.cart-count {
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 12px;
+  position: relative;
+  top: -8px;
+  left: -5px;
+}
+/* ===============================
+   Shop Header
+=============================== */
+.shop-header {
+  background-color: var(--gray-medium);
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1467043198406-dc953a3defa0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.bg-gray-light {
+  background-color: var(--gray-ultralight);
+}
+/* post cards  */
+.post {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+  color: var(--gray-dark);
+}
+
+.post p {
+  color: var(--gray-medium);
+}
+
+/* ===============================
+   Footer
+=============================== */
+.bg-gray-darker {
+  background-color: var(--gray-darker);
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  color: white;
+}
+
+footer h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--gray-light);
+}
+
+footer p,
+footer address {
+  color: var(--gray-light);
+  font-size: 14px;
+}
+
+footer ul li a {
+  color: var(--gray-light);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--gray-light);
+  color: var(--gray-dark) !important;
+  transform: translateY(-3px);
+}
+
+.payment-methods {
+  max-height: 30px;
+}
+
+hr.bg-gray-medium {
+  background-color: var(--gray-medium);
+}

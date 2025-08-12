@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Urban Thrift</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Urban Thrift Logo" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"
+                ><i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="about-hero d-flex align-items-center">
+      <div class="container text-center text-white">
+        <h1
+          class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown"
+        >
+          Our Sustainable Story
+        </h1>
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+          Redefining fashion with purpose and style
+        </p>
+      </div>
+    </header>
+
+    <!-- About Us Content -->
+    <section class="py-5 about-section">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="img-container animate__animated animate__fadeInLeft">
+              <img
+                src="background1.png"
+                alt="About Urban Thrift"
+                class="img-fluid rounded shadow"
+              />
+              <div class="img-overlay"></div>
+            </div>
+          </div>
+          <div class="col-md-6 animate__animated animate__fadeInRight">
+            <h2 class="mb-4">Our Story</h2>
+            <p class="lead">
+              Urban Thrift began with a simple mission: to make sustainable
+              fashion accessible and stylish.
+            </p>
+            <p>
+              We believe in giving clothing a second life, reducing waste, and
+              curating timeless pieces that fit modern lifestyles. Every item we
+              offer is carefully selected for quality, style, and sustainability
+              — because we believe fashion should be both beautiful and
+              responsible.
+            </p>
+            <button class="btn btn-outline-dark mt-3" id="storyBtn">
+              Read Full Story
+            </button>
+            <div id="fullStory" class="mt-3 d-none">
+              <p>
+                Founded in 2018 by fashion enthusiast and environmental advocate
+                Mia Rodriguez, Urban Thrift started as a small pop-up shop in
+                Manila. What began as a passion project quickly grew into a
+                movement as more people embraced sustainable fashion.
+              </p>
+              <p>
+                Today, we partner with local communities to source high-quality
+                pre-loved items while supporting fair trade practices. Our team
+                of stylists ensures each piece meets our standards before it
+                reaches you.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div
+          class="row mission-section py-5 my-5 rounded-3 animate__animated animate__fadeIn"
+        >
+          <div class="col-12 text-center mb-4">
+            <h2 class="display-5">Our Mission</h2>
+            <div class="divider mx-auto my-3"></div>
+          </div>
+          <div class="col-md-8 mx-auto text-center">
+            <p class="lead">
+              To revolutionize the fashion industry by making sustainable
+              shopping the first choice for conscious consumers, proving that
+              style and environmental responsibility can go hand in hand.
+            </p>
+          </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="row text-center values-section">
+          <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
+            <div class="value-card p-4 rounded-3 h-100">
+              <div class="icon-container mb-4">
+                <i class="fas fa-recycle fa-3x"></i>
+              </div>
+              <h5>Sustainability</h5>
+              <p>
+                We champion eco-friendly practices and reduce textile waste by
+                promoting second-hand fashion. Each purchase saves approximately
+                1,800 gallons of water.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <div class="value-card p-4 rounded-3 h-100">
+              <div class="icon-container mb-4">
+                <i class="fas fa-tshirt fa-3x"></i>
+              </div>
+              <h5>Quality</h5>
+              <p>
+                Every piece is inspected to ensure it meets our standards of
+                durability and timeless style. We accept only items in excellent
+                condition or better.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <div class="value-card p-4 rounded-3 h-100">
+              <div class="icon-container mb-4">
+                <i class="fas fa-users fa-3x"></i>
+              </div>
+              <h5>Community</h5>
+              <p>
+                We support local sellers and foster a community of conscious
+                shoppers. 30% of our profits go back to environmental
+                initiatives in our communities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="row py-5">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5">Meet The Team</h2>
+            <div class="divider mx-auto my-3"></div>
+            <p class="lead">The passionate people behind Urban Thrift</p>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="team-card text-center">
+              <div class="team-img-container mb-3">
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Team Member"
+                  class="img-fluid rounded-circle"
+                />
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+              <h5>Mia Rodriguez</h5>
+              <p class="text-muted">Founder & CEO</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="team-card text-center">
+              <div class="team-img-container mb-3">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Team Member"
+                  class="img-fluid rounded-circle"
+                />
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+              <h5>James Wilson</h5>
+              <p class="text-muted">Creative Director</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="team-card text-center">
+              <div class="team-img-container mb-3">
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Team Member"
+                  class="img-fluid rounded-circle"
+                />
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+              <h5>Sarah Chen</h5>
+              <p class="text-muted">Sustainability Lead</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="team-card text-center">
+              <div class="team-img-container mb-3">
+                <img
+                  src="https://randomuser.me/api/portraits/men/75.jpg"
+                  alt="Team Member"
+                  class="img-fluid rounded-circle"
+                />
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+              <h5>David Park</h5>
+              <p class="text-muted">Community Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="row stats-section py-5 rounded-3 mb-5">
+          <div class="col-md-3 col-6 text-center">
+            <div class="stat-number display-4" data-count="5000">0</div>
+            <div class="stat-label">Items Rescued</div>
+          </div>
+          <div class="col-md-3 col-6 text-center">
+            <div class="stat-number display-4" data-count="1200">0</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="col-md-3 col-6 text-center">
+            <div class="stat-number display-4" data-count="45">0</div>
+            <div class="stat-label">Local Partners</div>
+          </div>
+          <div class="col-md-3 col-6 text-center">
+            <div class="stat-number display-4" data-count="3">0</div>
+            <div class="stat-label">Years in Business</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5">What Our Community Says</h2>
+            <div class="divider mx-auto my-3"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 rounded-3 h-100">
+              <div class="rating mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="mb-4">
+                "Urban Thrift completely changed my perspective on second-hand
+                fashion. The quality is amazing and I love knowing my purchases
+                help the planet."
+              </p>
+              <div class="user d-flex align-items-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/22.jpg"
+                  alt="User"
+                  class="rounded-circle me-3"
+                  width="50"
+                />
+                <div>
+                  <h6 class="mb-0">Lisa Thompson</h6>
+                  <small class="text-muted">Loyal Customer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 rounded-3 h-100">
+              <div class="rating mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="mb-4">
+                "As a small seller, Urban Thrift has given me a platform to
+                reach conscious buyers while promoting sustainability. Their
+                team is wonderful to work with."
+              </p>
+              <div class="user d-flex align-items-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/41.jpg"
+                  alt="User"
+                  class="rounded-circle me-3"
+                  width="50"
+                />
+                <div>
+                  <h6 class="mb-0">Michael Santos</h6>
+                  <small class="text-muted">Local Seller</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 rounded-3 h-100">
+              <div class="rating mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="mb-4">
+                "The curation is impeccable - every piece feels special. I've
+                completely transformed my wardrobe sustainably thanks to Urban
+                Thrift."
+              </p>
+              <div class="user d-flex align-items-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/63.jpg"
+                  alt="User"
+                  class="rounded-circle me-3"
+                  width="50"
+                />
+                <div>
+                  <h6 class="mb-0">Jennifer Lee</h6>
+                  <small class="text-muted">Fashion Blogger</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-darker text-light pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <h5 class="text-uppercase mb-4">Urban Thrift</h5>
+            <p>
+              Curated second-hand fashion with a minimalist aesthetic and
+              sustainable values.
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-light"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Newsletter inside footer -->
+          <div class="col-md-6 mb-4">
+            <h5 class="text-uppercase mb-4">Join Our Mailing List</h5>
+            <p>Get exclusive offers and style tips delivered to your inbox</p>
+            <form class="d-flex">
+              <input
+                type="email"
+                class="form-control me-2"
+                placeholder="Your email address"
+              />
+              <button class="btn btn-gray-dark" type="submit">Subscribe</button>
+            </form>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h5 class="text-uppercase mb-4">Store Info</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Thrift Ave,
+                Manila, PH
+              </p>
+              <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope me-2"></i> info@urbanthrift.com</p>
+              <p><i class="fas fa-clock me-2"></i> Mon-Sat: 10AM - 8PM</p>
+            </address>
+          </div>
+        </div>
+
+        <hr class="my-4 bg-gray-medium" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-3">
+            <p class="mb-0">&copy; 2023 Urban Thrift. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 mb-3 text-md-end">
+            <img
+              src="img/payment.png"
+              alt="Payment Methods"
+              class="img-fluid payment-methods"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Toggle full story
+      document
+        .getElementById("storyBtn")
+        .addEventListener("click", function () {
+          const fullStory = document.getElementById("fullStory");
+          fullStory.classList.toggle("d-none");
+          this.textContent = fullStory.classList.contains("d-none")
+            ? "Read Full Story"
+            : "Show Less";
+        });
+
+      // Animate stats counting
+      function animateStats() {
+        const statNumbers = document.querySelectorAll(".stat-number");
+        statNumbers.forEach((stat) => {
+          const target = parseInt(stat.getAttribute("data-count"));
+          const duration = 2000;
+          const step = target / (duration / 16);
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              clearInterval(timer);
+              current = target;
+            }
+            stat.textContent = Math.floor(current);
+          }, 16);
+        });
+      }
+
+      // Trigger stats animation when scrolled to
+      window.addEventListener("scroll", function () {
+        const statsSection = document.querySelector(".stats-section");
+        const position = statsSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (position < screenPosition) {
+          animateStats();
+          // Remove event listener after triggering once
+          window.removeEventListener("scroll", this);
+        }
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
