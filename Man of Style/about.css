@@ -1,11 +1,11 @@
 /* About Us page-specific styles */
 :root {
-            --gray-ultralight: #f8f9fa;
-            --gray-light: #e9ecef;
-            --gray-medium: #6c757d;
-            --gray-dark: #343a40;
-            --gray-darker: #212529;
-        }
+    --gray-ultralight: #f8f9fa;
+    --gray-light: #e9ecef;
+    --gray-medium: #6c757d;
+    --gray-dark: #343a40;
+    --gray-darker: #212529;
+}
 
 body {
     background-color: rgba(248, 248, 248, 0.95) !important;
@@ -19,7 +19,6 @@ body {
 .navbar {
     background-color: rgba(255, 255, 255, 0.95) !important;
     background-size: cover;
-    
 }
 
 .navbar-brand img {
@@ -75,7 +74,7 @@ body {
     background: url('hero.png') no-repeat center center;
     background-size: cover;
     height: 60vh;
-    min-height: 400px;
+    min-height: 300px;
     position: relative;
 }
 

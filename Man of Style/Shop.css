@@ -2,24 +2,20 @@
    Theme Variables
 =============================== */
 :root {
-    --gray-darker: #222222;
-    --gray-dark: #333333;
-    --gray-medium: #555555;
-    --gray-light: #cccccc;
-    --gray-lighter: #eeeeee;
-    --gray-ultralight: #f8f8f8;
-    --accent-color: #666666;
+    --gray-ultralight: #f8f9fa;
+    --gray-light: #e9ecef;
+    --gray-medium: #6c757d;
+    --gray-dark: #343a40;
+    --gray-darker: #212529;
 }
 
 /* ===============================
    Base Styles
 =============================== */
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--gray-dark);
-    background: url('Background.png') no-repeat center center fixed;
+    background-color: rgba(248, 248, 248, 0.95) !important;
     background-size: cover;
-    padding-top: 80px;
+    padding-top: 70px; /* for fixed navbar */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,8 +63,8 @@ a:hover {
    Navigation
 =============================== */
 .navbar {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-size: cover;
 }
 
 .navbar-brand img {
@@ -89,6 +85,7 @@ a:hover {
 
 /* Nav menu alignment */
 .navbar-nav {
+    
     margin: 0 auto;
     text-align: center;
 }
@@ -461,6 +458,71 @@ hr.bg-gray-medium {
 }
 
 /* ===============================
+   Seach bar
+=============================== */
+
+/* Search Bar Styles */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    transition: all 0.3s ease;
+    color: #333;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Expand search when focused */
+.navbar-nav .nav-item:hover .search-input,
+.search-input:focus {
+    width: 180px;
+    padding: 5px 10px;
+    border-bottom-color: #333;
+}
+
+/* Responsive search */
+@media (max-width: 992px) {
+    .search-container {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .search-input {
+        width: 100%;
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .navbar-nav .nav-item:hover .search-input,
+    .search-input:focus {
+        width: 100%;
+    }
+}
+
+/* ===============================
    Responsive Adjustments
 =============================== */
 @media (max-width: 991.98px) {
@@ -512,4 +574,24 @@ hr.bg-gray-medium {
     margin: 0;
     border: none;
     overflow: hidden;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
 }

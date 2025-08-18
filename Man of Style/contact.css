@@ -1,17 +1,74 @@
 /* Urban Thrift Theme Colors */
-body {
-  background: #f7f7f7;
-  font-family: "Segoe UI", Arial, sans-serif;
+:root {
+    --gray-ultralight: #f8f9fa;
+    --gray-light: #e9ecef;
+    --gray-medium: #6c757d;
+    --gray-dark: #343a40;
+    --gray-darker: #212529;
 }
 
+/* ===============================
+   Navigation
+=============================== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-size: cover;
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+
+
+/* Navbar background */
 .bg-gray-dark {
-  background: #ffffff !important;
+    background-color: var(--gray-ultralight) !important;
 }
-.bg-gray-darker {
-  background: #181a1b !important;
+
+.navbar.bg-gray-dark {
+    background: url('Background.png') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(34, 34, 34, 0.85);
 }
-.bg-gray-medium {
-  background: #44484d !important;
+
+/* Nav menu alignment */
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Nav link styles */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--gray-dark);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--gray-medium);
+}
+
+/* Cart badge */
+.cart-count {
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 12px;
+    position: relative;
+    top: -8px;
+    left: -5px;
+}
+
+body {
+  background-color: rgba(248, 248, 248, 0.95) !important;
+  background-size: cover;
+  padding-top: 70px; /* for fixed navbar */
 }
 
 .logo {
@@ -19,14 +76,69 @@ body {
 }
 
 .contact-page {
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding: 120px 0 80px;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
 }
-
+.contact-page .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 .contact-page h2 {
   font-weight: 700;
   color: #23272b;
   letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-option {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.contact-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #23272b;
+  margin-bottom: 20px;
+}
+
+.contact-option h4 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #23272b;
+}
+
+.contact-option p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.contact-option .btn {
+  padding: 8px 25px;
+  font-weight: 600;
+  border-width: 2px;
+}
+
+.contact-page h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #23272b;
+  margin: 15px auto 0;
 }
 
 #contact-form {
@@ -82,7 +194,9 @@ body {
 }
 
 .social-links a:hover {
-  color: #44484d;
+  background: #23272b;
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 /* ===============================
@@ -183,40 +297,71 @@ hr.bg-gray-medium {
   margin-left: 270px;
 }
 
-/* ===============================
-   Responsive Adjustments
-=============================== */
+/* Responsive Adjustments */
 @media (max-width: 991.98px) {
-  .sticky-sidebar {
-    position: static;
-    top: auto;
-  }
-
-  .filter-sidebar {
-    margin-bottom: 30px;
+.contact-page {
+  padding: 120px 0;
+  background-color: #f8f9fa;
+}
+  #contact-form,
+  .contact-info {
+    padding: 30px;
   }
 }
 
 @media (max-width: 767.98px) {
-  body {
-    padding-top: 70px;
+  .contact-page {
+    padding: 80px 0 40px;
   }
 
-  .product-card {
-    margin-bottom: 30px;
+  .contact-page {
+    padding: 80px 0;
   }
-
-  footer .col-md-3 {
-    margin-bottom: 30px;
+  
+  .contact-option {
+    padding: 25px 20px;
+    margin-bottom: 20px;
   }
-
-  .filter-sidebar {
-    padding: 15px;
+  
+  .contact-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
   }
+  
+  .contact-option h4 {
+    font-size: 1.1rem;
+  }
+}
+  
+ .contact-page h2 {
+  font-weight: 700;
+  color: #23272b;
+  margin-bottom: 50px;
+  position: relative;
+}
+  
+  #contact-form,
+  .contact-info {
+    padding: 25px;
+  }
+  
+  .col-lg-6.mb-4 {
+    margin-bottom: 30px !important;
+  
+}
 
-  .filter-btn {
-    padding: 6px 12px;
-    font-size: 14px;
+@media (max-width: 575.98px) {
+  #contact-form,
+  .contact-info {
+    padding: 20px;
+  }
+  
+  .form-control {
+    padding: 10px 12px;
+  }
+  
+  .btn-dark {
+    padding: 10px 20px;
   }
 }
 
@@ -245,78 +390,4 @@ hr.bg-gray-medium {
   #contact-form {
     padding: 16px;
   }
-}
-
-/* ===============================
-   Navigation
-=============================== */
-.navbar {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  backdrop-filter: blur(5px);
-}
-
-.navbar-brand img {
-  width: 120px;
-  height: auto;
-}
-
-/* Navbar background */
-.bg-gray-dark {
-  background-color: var(--gray-ultralight) !important;
-}
-
-.navbar.bg-gray-dark {
-  background: url("Background.png") no-repeat center center;
-  background-size: cover;
-  background-color: rgba(34, 34, 34, 0.85);
-}
-
-/* Nav menu alignment */
-.navbar-nav {
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Nav link styles */
-.navbar-dark .navbar-nav .nav-link {
-  color: var(--gray-dark);
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 10px 20px;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--gray-medium);
-}
-
-/* Cart badge */
-.cart-count {
-  background-color: var(--gray-light);
-  color: var(--gray-dark);
-  border-radius: 50%;
-  padding: 1px 6px;
-  font-size: 12px;
-  position: relative;
-  top: -8px;
-  left: -5px;
-}
-
-/* ===============================
-   Shop Header
-=============================== */
-.shop-header {
-  background-color: var(--gray-medium);
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1467043198406-dc953a3defa0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 30px;
-}
-
-.bg-gray-light {
-  background-color: var(--gray-ultralight);
 }
