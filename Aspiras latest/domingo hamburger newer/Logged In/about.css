@@ -171,6 +171,9 @@ body {
   height: 32px; /* adjust size */
   border-radius: 50%; /* makes it circular */
   object-fit: cover; /* keeps aspect ratio */
+  position: relative;
+  top: -5px;
+  left: -20px;
 }
 
 /* Hero Section */
@@ -450,6 +453,26 @@ hr.bg-gray-medium {
 
   .display-3 {
     font-size: 2.5rem;
+  }
+
+  .fa-shopping-cart {
+    position: relative;
+    right: -5px;
+  }
+
+  .cart-count {
+    position: relative;
+    right: -5px;
+  }
+
+  .user-icon {
+    width: 10%; /* adjust size */
+    height: 32px; /* adjust size */
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover; /* keeps aspect ratio */
+    position: relative;
+    top: -10px;
+    margin-left: 30px;
   }
 }
 
