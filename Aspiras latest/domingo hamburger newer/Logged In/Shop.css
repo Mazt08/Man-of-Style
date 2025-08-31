@@ -193,9 +193,6 @@ a:hover {
   height: 32px; /* adjust size */
   border-radius: 50%; /* makes it circular */
   object-fit: cover; /* keeps aspect ratio */
-  position: relative;
-  top: -3px;
-  left: -30px;
 }
 
 /* ===============================
@@ -582,7 +579,17 @@ hr.bg-gray-medium {
   .navbar-dark .navbar-nav .nav-link {
     padding: 8px 10px;
   }
+
+.user-icon {
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
 }
+
+}
+
+
 
 @media (max-width: 767.98px) {
   body {
@@ -606,6 +613,9 @@ hr.bg-gray-medium {
     font-size: 14px;
   }
 
+
+  }
+
   /* Mobile search */
   .search-container {
     display: none;
@@ -623,47 +633,35 @@ hr.bg-gray-medium {
   .navbar-nav .nav-item:hover .search-input,
   .search-input:focus {
     width: 100%;
-  }
 
-  .fa-shopping-cart {
-    position: relative;
-    right: -10px;
-  }
-
-  .cart-count {
-    position: relative;
-    right: -10px;
+  
   }
 
   .user-icon {
-    width: 10%; /* adjust size */
-    height: 32px; /* adjust size */
-    border-radius: 50%; /* makes it circular */
-    object-fit: cover; /* keeps aspect ratio */
-    position: relative;
-    top: -5px;
-    margin-left: 60px;
-  }
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
 
-  /* ===============================
+/* ===============================
    Filter Animation
 =============================== */
-  [data-category] {
-    transition: var(--transition);
-  }
+[data-category] {
+  transition: var(--transition);
+}
 
-  [data-category].hide {
-    opacity: 0;
-    transform: scale(0.95);
-    height: 0;
-    padding: 0;
-    margin: 0;
-    border: none;
-    overflow: hidden;
-  }
+[data-category].hide {
+  opacity: 0;
+  transform: scale(0.95);
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
 
-  /* No Results Styling */
-  #noResults {
-    min-height: 400px;
-  }
+/* No Results Styling */
+#noResults {
+  min-height: 400px;
 }
