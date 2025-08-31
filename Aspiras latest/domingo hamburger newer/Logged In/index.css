@@ -142,6 +142,16 @@ a:hover {
   bottom: 0 !important;
 }
 
+.user-icon {
+  width: 100%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+  position: relative;
+  top: -05px;
+  left: -20px;
+}
+
 /* ================================
    HERO SECTION
 ================================ */
@@ -543,5 +553,29 @@ footer ul li a:hover {
   /* Hide hamburger icon on desktop */
   .navbar-toggler {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  #contact-form {
+    padding: 16px;
+  }
+
+  .fa-shopping-cart {
+    margin-left: 25px;
+  }
+
+  .user-icon {
+    width: 10%; /* adjust size */
+    height: 32px; /* adjust size */
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover; /* keeps aspect ratio */
+    position: relative;
+    top: -10px;
+    margin-left: 45px;
   }
 }

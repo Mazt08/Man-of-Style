@@ -117,8 +117,6 @@
   bottom: 0;
 }
 
-
-
 /* Navbar background */
 .bg-gray-dark {
   background-color: var(--gray-ultralight) !important;
@@ -167,6 +165,9 @@
   height: 32px; /* adjust size */
   border-radius: 50%; /* makes it circular */
   object-fit: cover; /* keeps aspect ratio */
+  position: relative;
+  top: -20px;
+  left: -20px;
 }
 
 body {
@@ -494,10 +495,17 @@ hr.bg-gray-medium {
     padding: 16px;
   }
 
+  .fa-shopping-cart {
+    margin-left: 25px;
+  }
+
   .user-icon {
-  width: 10%; /* adjust size */
-  height: 32px; /* adjust size */
-  border-radius: 50%; /* makes it circular */
-  object-fit: cover; /* keeps aspect ratio */
-}
+    width: 10%; /* adjust size */
+    height: 32px; /* adjust size */
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover; /* keeps aspect ratio */
+    position: relative;
+    top: -30px;
+    margin-left: 45px;
+  }
 }

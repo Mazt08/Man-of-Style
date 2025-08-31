@@ -133,6 +133,9 @@ body {
   height: 32px; /* adjust size */
   border-radius: 50%; /* makes it circular */
   object-fit: cover; /* keeps aspect ratio */
+  position: relative;
+  top: -20px;
+  left: -20px;
 }
 
 .user-icon:hover {
