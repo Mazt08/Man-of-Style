@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics | Man Of Style</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="report.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="branding">
+                <div class="branding-logo">MOS</div>
+                <div class="branding-text">
+                    <h1>Man Of Style</h1>
+                    <p>Reports & Analytics</p>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active has-submenu">
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Reports & Analytics</span>                           
+                        </a>
+                    </li>                   
+                </ul>
+            </nav>
+            
+            <div class="admin-footer">
+                <div class="user-profile">
+                    <div class="avatar">AU</div>
+                    <div class="user-info">
+                        <p class="username">Admin User</p>
+                        <p class="user-role">Super Admin</p>
+                    </div>
+                </div>
+                <button class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <header class="content-header">
+                <h2>Reports & Analytics</h2>
+                <div class="header-actions">
+                    <div class="date-range-picker">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="startDate" class="date-input">
+                        <span>to</span>
+                        <input type="date" id="endDate" class="date-input">
+                        <button class="btn-apply">
+                            <i class="fas fa-check"></i>
+                            Apply
+                        </button>
+                    </div>
+                    <div class="export-options">
+                        <button class="btn-export">
+                            <i class="fas fa-file-export"></i>
+                            Export
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Key Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Total Revenue</h3>
+                        <div class="metric-value">$24,589</div>
+                        <div class="metric-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% from last period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Total Orders</h3>
+                        <div class="metric-value">428</div>
+                        <div class="metric-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8.3% from last period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>New Customers</h3>
+                        <div class="metric-value">187</div>
+                        <div class="metric-trend down">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>3.2% from last period</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Conversion Rate</h3>
+                        <div class="metric-value">3.8%</div>
+                        <div class="metric-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>1.1% from last period</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-row">
+                <section class="chart-section">
+                    <div class="section-header">
+                        <h3>Sales Performance</h3>
+                        <select class="chart-select">
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                            <option>This Year</option>
+                            <option>Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </section>
+                
+                <section class="chart-section">
+                    <div class="section-header">
+                        <h3>Top Products</h3>
+                        <select class="chart-select">
+                            <option>By Revenue</option>
+                            <option>By Units Sold</option>
+                            <option>By Profit</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="productsChart"></canvas>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Additional Reports -->
+            <div class="reports-grid">
+                <section class="report-section">
+                    <div class="section-header">
+                        <h3>Customer Acquisition</h3>
+                        <button class="btn-view-details">
+                            View Details
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="acquisitionChart"></canvas>
+                    </div>
+                </section>
+                
+                <section class="report-section">
+                    <div class="section-header">
+                        <h3>Order Status Distribution</h3>
+                        <button class="btn-view-details">
+                            View Details
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Data Tables -->
+            <section class="data-section">
+                <div class="section-header">
+                    <h3>Recent Transactions</h3>
+                    <div class="section-actions">
+                        <button class="btn-refresh">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Payment Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#MOS-10542</td>
+                                <td>2023-06-15</td>
+                                <td>John Smith</td>
+                                <td>$245.00</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>Credit Card</td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10541</td>
+                                <td>2023-06-14</td>
+                                <td>Mary Johnson</td>
+                                <td>$189.50</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>PayPal</td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10540</td>
+                                <td>2023-06-14</td>
+                                <td>David Brown</td>
+                                <td>$320.75</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>Credit Card</td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10539</td>
+                                <td>2023-06-13</td>
+                                <td>Sarah Wilson</td>
+                                <td>$125.99</td>
+                                <td><span class="status-badge refunded">Refunded</span></td>
+                                <td>Bank Transfer</td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10538</td>
+                                <td>2023-06-12</td>
+                                <td>Robert King</td>
+                                <td>$275.30</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>Credit Card</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sales Chart
+            const salesCtx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(salesCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Sales',
+                        data: [3200, 4200, 5100, 5800, 6200, 7500],
+                        backgroundColor: 'rgba(102, 102, 102, 0.1)',
+                        borderColor: 'rgba(102, 102, 102, 1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Products Chart
+            const productsCtx = document.getElementById('productsChart').getContext('2d');
+            const productsChart = new Chart(productsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Premium Jeans', 'Classic T-Shirt', 'Leather Jacket', 'Sneakers', 'Wool Coat'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: [5200, 4800, 3900, 3200, 2800],
+                        backgroundColor: 'rgba(102, 102, 102, 0.7)',
+                        borderColor: 'rgba(102, 102, 102, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Acquisition Chart
+            const acquisitionCtx = document.getElementById('acquisitionChart').getContext('2d');
+            const acquisitionChart = new Chart(acquisitionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Organic Search', 'Social Media', 'Direct', 'Email', 'Referral'],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            'rgba(102, 102, 102, 0.7)',
+                            'rgba(136, 136, 136, 0.7)',
+                            'rgba(68, 68, 68, 0.7)',
+                            'rgba(170, 170, 170, 0.7)',
+                            'rgba(204, 204, 204, 0.7)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // Status Chart
+            const statusCtx = document.getElementById('statusChart').getContext('2d');
+            const statusChart = new Chart(statusCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Completed', 'Processing', 'Shipped', 'Pending', 'Cancelled'],
+                    datasets: [{
+                        data: [65, 15, 10, 8, 2],
+                        backgroundColor: [
+                            'rgba(39, 174, 96, 0.7)',
+                            'rgba(41, 128, 185, 0.7)',
+                            'rgba(243, 156, 18, 0.7)',
+                            'rgba(149, 165, 166, 0.7)',
+                            'rgba(231, 76, 60, 0.7)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // Submenu toggle
+            document.querySelectorAll('.has-submenu').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (e.target.closest('a')) {
+                        this.classList.toggle('active');
+                        const submenu = this.querySelector('.submenu');
+                        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

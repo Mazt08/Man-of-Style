@@ -1,0 +1,466 @@
+/* About Us page-specific styles */
+:root {
+  --gray-ultralight: #f8f9fa;
+  --gray-light: #e9ecef;
+  --gray-medium: #6c757d;
+  --gray-dark: #343a40;
+  --gray-darker: #212529;
+}
+
+body {
+  background-color: rgba(248, 248, 248, 0.95) !important;
+  background-size: cover;
+  padding-top: 70px; /* for fixed navbar */
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-size: cover;
+}
+
+.navbar-brand img {
+  width: 120px;
+  height: auto;
+}
+
+.bg-gray-dark {
+  background-color: var(--gray-ultralight) !important;
+}
+
+.navbar.bg-gray-dark {
+  background: url("Background.png") no-repeat center center;
+  background-size: cover;
+  background-color: rgba(34, 34, 34, 0.85);
+}
+
+.navbar-nav {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--gray-dark);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--gray-medium) !important;
+}
+
+.cart-count {
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 12px;
+  position: relative;
+  top: -8px;
+  left: -5px;
+}
+
+/* ================================
+   HAMBURGER MENU ICON
+================================ */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--gray-dark);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: var(--gray-dark);
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+}
+
+/* Active state for hamburger icon (when menu is open) */
+.navbar-toggler[aria-expanded="true"] .hamburger-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Navbar background */
+.bg-gray-dark {
+  background-color: var(--gray-ultralight) !important;
+}
+
+.navbar.bg-gray-dark {
+  background: url("Background.png") no-repeat center center;
+  background-size: cover;
+  background-color: rgba(34, 34, 34, 0.85);
+}
+
+/* Nav menu alignment */
+.navbar-nav {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Nav link styles */
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--gray-dark);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--gray-medium);
+}
+
+/* Cart badge */
+.cart-count {
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 12px;
+  position: relative;
+  top: -8px;
+  left: -5px;
+}
+
+.user-icon {
+  width: 100%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
+
+/* Hero Section */
+.about-hero {
+  background: url("hero.png") no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+  min-height: 300px;
+  position: relative;
+}
+
+/* About Section */
+.about-section {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.02);
+}
+
+.img-container .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  border-radius: 8px;
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.mission-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+/* Values Section */
+.value-card {
+  background-color: white;
+  border: 1px solid var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(248, 177, 149, 0.1);
+  border-radius: 50%;
+  color: var(--secondary-color);
+}
+
+/* Team Section */
+.team-card {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.team-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.team-social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(42, 63, 84, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-img-container:hover .team-social {
+  opacity: 1;
+}
+
+.team-social a {
+  color: white;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.team-social a:hover {
+  transform: translateY(-3px);
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: var(--light-color);
+  border: 1px solid var(--gray-light);
+}
+
+.stat-number {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--gray-medium);
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: var(--light-color);
+}
+
+.testimonial-card {
+  background-color: white;
+  border: 1px solid var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  color: var(--secondary-color);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--dark-color) 100%
+  );
+  color: white;
+}
+
+/* Divider */
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+/* ===============================
+   Footer
+=============================== */
+.bg-gray-darker {
+  background-color: var(--gray-darker);
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  color: white;
+}
+
+footer h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--gray-light);
+}
+
+footer p,
+footer address {
+  color: var(--gray-light);
+  font-size: 14px;
+}
+
+footer ul li a {
+  color: var(--gray-light);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--gray-light);
+  color: var(--gray-dark) !important;
+  transform: translateY(-3px);
+}
+
+.payment-methods {
+  max-height: 30px;
+}
+
+hr.bg-gray-medium {
+  background-color: var(--gray-medium);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+  }
+
+  .navbar-brand img {
+    width: 120px;
+  }
+
+  .display-3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

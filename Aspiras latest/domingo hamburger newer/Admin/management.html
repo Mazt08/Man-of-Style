@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man Of Style - Order Management</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="branding">
+                <div class="branding-logo">MOS</div>
+                <div class="branding-text">
+                    <h1>Man Of Style</h1>
+                    <p>Order Management</p>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="Admin.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Product Management</span>
+                        </a>
+                    </li>
+                    <li class="active has-submenu">
+                        <a href="#">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Order Management</span>
+                           
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="report.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Reports & Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="setting.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-footer">
+                <div class="user-profile">
+                    <div class="avatar">AU</div>
+                    <div class="user-info">
+                        <p class="username">Admin User</p>
+                        <p class="user-role">Super Admin</p>
+                    </div>
+                </div>
+<button class="btn-logout" onclick="logoutUser()">
+  <i class="fas fa-sign-out-alt"></i>
+</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <header class="content-header">
+                <h2>Order Management</h2>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search orders...">
+                    </div>
+                    <div class="header-filters">
+                        <select class="filter-select">
+                            <option>All Statuses</option>
+                            <option>Pending</option>
+                            <option>Processing</option>
+                            <option>Shipped</option>
+                            <option>Delivered</option>
+                            <option>Returned</option>
+                        </select>
+                        <input type="date" class="date-filter">
+                        <button class="btn-filter">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Order Summary Widgets -->
+            <div class="dashboard-widgets">
+                <div class="widget">
+                    <div class="widget-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="widget-content">
+                        <h3>Pending Orders</h3>
+                        <div class="widget-value">18</div>
+                        <div class="widget-trend">
+                            <span>5 new today</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <div class="widget-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="widget-content">
+                        <h3>Processing</h3>
+                        <div class="widget-value">24</div>
+                        <div class="widget-trend">
+                            <span>12 ready to ship</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <div class="widget-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="widget-content">
+                        <h3>Shipped</h3>
+                        <div class="widget-value">32</div>
+                        <div class="widget-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8% from yesterday</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <div class="widget-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <div class="widget-content">
+                        <h3>Returns</h3>
+                        <div class="widget-value">7</div>
+                        <div class="widget-trend down">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>2% from last week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h3>Recent Orders</h3>
+                    <div class="section-actions">
+                        <button class="btn-export">
+                            <i class="fas fa-file-export"></i>
+                            Export
+                        </button>
+                        <button class="btn-refresh">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#MOS-10258</td>
+                                <td>
+                                    <div class="customer-cell">
+                                        <div class="customer-avatar">JS</div>
+                                        <div class="customer-name">John Smith</div>
+                                    </div>
+                                </td>
+                                <td>2023-06-15</td>
+                                <td>3</td>
+                                <td>$245.00</td>
+                                <td><span class="status-badge processing">Processing</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action view" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-action edit" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-action print" title="Print">
+                                            <i class="fas fa-print"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10257</td>
+                                <td>
+                                    <div class="customer-cell">
+                                        <div class="customer-avatar">MJ</div>
+                                        <div class="customer-name">Mary Johnson</div>
+                                    </div>
+                                </td>
+                                <td>2023-06-14</td>
+                                <td>2</td>
+                                <td>$189.50</td>
+                                <td><span class="status-badge shipped">Shipped</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action view" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-action edit" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-action print" title="Print">
+                                            <i class="fas fa-print"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10256</td>
+                                <td>
+                                    <div class="customer-cell">
+                                        <div class="customer-avatar">DB</div>
+                                        <div class="customer-name">David Brown</div>
+                                    </div>
+                                </td>
+                                <td>2023-06-14</td>
+                                <td>5</td>
+                                <td>$320.75</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action view" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-action edit" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-action print" title="Print">
+                                            <i class="fas fa-print"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10255</td>
+                                <td>
+                                    <div class="customer-cell">
+                                        <div class="customer-avatar">SW</div>
+                                        <div class="customer-name">Sarah Wilson</div>
+                                    </div>
+                                </td>
+                                <td>2023-06-13</td>
+                                <td>1</td>
+                                <td>$125.99</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action view" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-action edit" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-action print" title="Print">
+                                            <i class="fas fa-print"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#MOS-10254</td>
+                                <td>
+                                    <div class="customer-cell">
+                                        <div class="customer-avatar">RK</div>
+                                        <div class="customer-name">Robert King</div>
+                                    </div>
+                                </td>
+                                <td>2023-06-12</td>
+                                <td>4</td>
+                                <td>$275.30</td>
+                                <td><span class="status-badge returned">Returned</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action view" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-action edit" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-action print" title="Print">
+                                            <i class="fas fa-print"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <div class="pagination-info">
+                        Showing 1 to 5 of 24 entries
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="btn-pagination" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn-pagination active">1</button>
+                        <button class="btn-pagination">2</button>
+                        <button class="btn-pagination">3</button>
+                        <button class="btn-pagination">4</button>
+                        <button class="btn-pagination">5</button>
+                        <button class="btn-pagination">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+
+<script src="manage.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="branding">
+                <div class="branding-logo">MOS</div>
+                <div class="branding-text">
+                    <h1>Man Of Style</h1>
+                    <p>Settings</p>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="Admin.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Product Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="management.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Order Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <i class="fas fa-users"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="report.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Reports & Analytics</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-footer">
+                <div class="user-profile">
+                    <div class="avatar">AU</div>
+                    <div class="user-info">
+                        <p class="username">Admin User</p>
+                        <p class="user-role">Super Admin</p>
+                    </div>
+                </div>
+                <button class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <header class="content-header">
+                <h2>Settings</h2>
+                <div class="header-actions">
+                    <button class="btn-save">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                </div>
+            </header>
+
+            <!-- Settings Form -->
+            <div class="settings-form">
+
+                <!-- General Settings Card -->
+                <div class="settings-card">
+                    <h3>General Settings</h3>
+                    <div class="form-group">
+                        <label for="store-name">Store Name</label>
+                        <input type="text" id="store-name" value="Man Of Style">
+                    </div>
+                    <div class="form-group">
+                        <label for="store-email">Store Email</label>
+                        <input type="email" id="store-email" value="contact@manofstyle.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="timezone">Timezone</label>
+                        <select id="timezone">
+                            <option>(UTC-05:00) Eastern Time</option>
+                            <option>(UTC-08:00) Pacific Time</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Appearance Card -->
+                <div class="settings-card">
+                    <h3>Appearance</h3>
+                    <div class="form-group">
+                        <label for="theme">Theme</label>
+                        <select id="theme">
+                            <option>Light</option>
+                            <option>Dark</option>
+                            <option>System Default</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="dark-mode" checked>
+                        <label for="dark-mode">Enable Dark Mode</label>
+                    </div>
+                </div>
+
+                <!-- Danger Zone Card -->
+                <div class="settings-card danger-zone">
+                    <h3>Danger Zone</h3>
+                    <div class="danger-action" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div>
+                            <h4>Reset All Settings</h4>
+                            <p>Reset to default configuration</p>
+                        </div>
+                        <button class="btn-reset">
+                            <i class="fas fa-undo"></i>
+                            Reset Settings
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
