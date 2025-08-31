@@ -403,6 +403,14 @@ hr.bg-gray-medium {
     justify-content: flex-start !important;
     padding-bottom: 1rem;
   }
+
+.user-icon {
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
+
 }
 
 @media (max-width: 576px) {
