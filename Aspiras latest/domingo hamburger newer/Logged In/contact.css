@@ -117,6 +117,8 @@
   bottom: 0;
 }
 
+
+
 /* Navbar background */
 .bg-gray-dark {
   background-color: var(--gray-ultralight) !important;
@@ -491,4 +493,11 @@ hr.bg-gray-medium {
   #contact-form {
     padding: 16px;
   }
+
+  .user-icon {
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
 }

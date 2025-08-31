@@ -19,6 +19,9 @@
           <img src="img/logo.png" alt="Man of Style Logo" class="logo" />
         </a>
         <button
+
+          
+
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -47,12 +50,30 @@
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
 
+<li class="nav-item">
+          <div class="search-container">
+            <form class="search-form" id="searchForm" onsubmit="return false;">
+              <input type="text" class="search-input" id="searchInput" placeholder="Search products...">
+              <button type="button" class="search-button">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </li>
+
             <li class="nav-item">
               <a class="nav-link" href="cart.html" id="cart-link">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">0</span>
               </a>
             </li>
+
+              <li class="nav-item">
+              <a class="nav-link" href="../login.html" onclick="logoutUser()">
+                <img src="img/user/user.webp" alt="User" class="user-icon" />
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>

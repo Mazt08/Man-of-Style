@@ -605,6 +605,7 @@ hr.bg-gray-medium {
 
   /* Mobile search */
   .search-container {
+    display: none;
     margin: 10px 0;
     width: 100%;
   }
@@ -619,7 +620,15 @@ hr.bg-gray-medium {
   .navbar-nav .nav-item:hover .search-input,
   .search-input:focus {
     width: 100%;
+
+  
   }
+
+  .user-icon {
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
 }
 
 /* ===============================
@@ -643,3 +652,4 @@ hr.bg-gray-medium {
 #noResults {
   min-height: 400px;
 }
+    }

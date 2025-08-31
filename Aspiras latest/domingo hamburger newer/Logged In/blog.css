@@ -127,6 +127,13 @@ body {
     bottom: 0;
 }
 
+.user-icon {
+  width: 100%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--secondary-font);
