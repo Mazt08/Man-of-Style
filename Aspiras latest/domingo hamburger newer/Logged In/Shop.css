@@ -1,0 +1,667 @@
+/* ===============================
+   Theme Variables
+=============================== */
+:root {
+  --gray-ultralight: #f8f9fa;
+  --gray-light: #e9ecef;
+  --gray-medium: #6c757d;
+  --gray-dark: #343a40;
+  --gray-darker: #212529;
+  --transition: all 0.3s ease;
+}
+
+/* ===============================
+   Base Styles
+=============================== */
+body {
+  background-color: rgba(248, 248, 248, 0.95);
+  padding-top: 120px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--gray-darker);
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-dark);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--gray-medium);
+}
+
+/* ===============================
+   Buttons
+=============================== */
+.btn-gray {
+  background-color: var(--gray-medium);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.btn-gray:hover {
+  background-color: var(--gray-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-gray-dark {
+  background-color: var(--gray-dark);
+  color: white;
+}
+
+.btn-gray-dark:hover {
+  background-color: var(--gray-darker);
+  color: white;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-size: cover;
+}
+
+.navbar-brand img {
+  width: 120px;
+  height: auto;
+}
+
+.bg-gray-dark {
+  background-color: var(--gray-ultralight) !important;
+}
+
+.navbar.bg-gray-dark {
+  background: url("Background.png") no-repeat center center;
+  background-size: cover;
+  background-color: rgba(34, 34, 34, 0.85);
+}
+
+.navbar-nav {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--gray-dark);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--gray-medium) !important;
+}
+
+.cart-count {
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 12px;
+  position: relative;
+  top: -8px;
+  left: -5px;
+}
+
+/* ================================
+   HAMBURGER MENU ICON
+================================ */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--gray-dark);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: var(--gray-dark);
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+}
+
+/* Active state for hamburger icon (when menu is open) */
+.navbar-toggler[aria-expanded="true"] .hamburger-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.cart-count {
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 12px;
+  position: relative;
+  top: -8px;
+  left: -5px;
+}
+
+.user-icon {
+  width: 100%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
+
+/* ===============================
+   Product Section
+=============================== */
+.product-section {
+  background-color: var(--gray-ultralight);
+}
+
+/* ===============================
+   Filter Sidebar
+=============================== */
+.filter-sidebar {
+  background-color: white;
+  border-radius: 8px;
+  left: 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  top: 200px;
+}
+
+.filter-sidebar h5 {
+  color: var(--gray-darker);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.filter-sidebar h5::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--gray-medium);
+}
+
+.filter-sidebar h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--gray-dark);
+}
+
+.filter-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+  border: 1px solid var(--gray-light);
+  background: white;
+  color: var(--gray-dark);
+  font-weight: 500;
+  transition: var(--transition);
+  border-radius: 4px;
+  padding: 8px 15px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--gray-medium);
+  color: white;
+  border-color: var(--gray-medium);
+}
+
+.price-range-slider {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.price-range-slider .form-range {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+}
+
+.price-range-slider .form-range::-webkit-slider-thumb {
+  background: var(--gray-medium);
+}
+
+.price-range-slider .form-range::-moz-range-thumb {
+  background: var(--gray-medium);
+}
+
+.price-range-slider div {
+  font-size: 14px;
+  color: var(--gray-medium);
+}
+
+/* ===============================
+   Product Cards
+=============================== */
+.product-card {
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+  background-color: white;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--gray-medium);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.product-thumb {
+  overflow: hidden;
+  background-color: var(--gray-ultralight);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-thumb img {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-details h4 a {
+  color: var(--gray-darker);
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  transition: var(--transition);
+}
+
+.product-details h4 a:hover {
+  color: var(--gray-medium);
+}
+
+.product-rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.product-price {
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--gray-dark);
+  font-size: 20px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--gray-medium);
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.product-links {
+  margin-top: 15px;
+}
+
+.product-links .btn {
+  flex: 1;
+}
+
+/* ===============================
+   Pagination
+=============================== */
+.pagination .page-item.active .page-link {
+  background-color: var(--gray-medium);
+  border-color: var(--gray-medium);
+  color: white;
+}
+
+.pagination .page-link {
+  color: var(--gray-medium);
+  border: 1px solid var(--gray-light);
+  margin: 0 5px;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.pagination .page-link:hover {
+  background-color: var(--gray-light);
+}
+
+/* ===============================
+   Newsletter
+=============================== */
+.bg-gray-medium {
+  background-color: var(--gray-medium);
+  color: white;
+}
+
+.newsletter h3 {
+  font-weight: 700;
+  color: white;
+}
+
+.newsletter p {
+  color: var(--gray-light);
+}
+
+.newsletter .form-control {
+  height: 45px;
+  border: none;
+}
+
+/* ===============================
+   Footer
+=============================== */
+.bg-gray-darker {
+  background-color: var(--gray-darker);
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  color: white;
+}
+
+footer h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--gray-light);
+}
+
+footer p,
+footer address {
+  color: var(--gray-light);
+  font-size: 14px;
+}
+
+footer ul li a {
+  color: var(--gray-light);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+footer ul li a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: var(--transition);
+  margin-right: 8px;
+}
+
+.social-links a:hover {
+  background-color: var(--gray-light);
+  color: var(--gray-dark) !important;
+  transform: translateY(-3px);
+}
+
+.payment-methods {
+  max-height: 30px;
+}
+
+hr.bg-gray-medium {
+  background-color: var(--gray-medium);
+  height: 1px;
+}
+
+/* ===============================
+   Search Bar
+=============================== */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  transition: var(--transition);
+  color: var(--gray-dark);
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: var(--gray-dark);
+  cursor: pointer;
+  padding: 8px;
+  transition: var(--transition);
+}
+
+.search-button:hover {
+  color: var(--gray-medium);
+}
+
+/* Expand search when focused */
+.navbar-nav .nav-item:hover .search-input,
+.search-input:focus {
+  width: 180px;
+  padding: 5px 10px;
+  border-bottom-color: var(--gray-dark);
+}
+
+/* ===============================
+   Notification
+=============================== */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gray-dark);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+/* ===============================
+   Responsive Adjustments
+=============================== */
+@media (max-width: 991.98px) {
+  .filter-sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 8px 10px;
+  }
+
+.user-icon {
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
+
+}
+
+
+
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .product-card {
+    margin-bottom: 30px;
+  }
+
+  footer .col-md-3 {
+    margin-bottom: 30px;
+  }
+
+  .filter-sidebar {
+    padding: 15px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+
+  }
+
+  /* Mobile search */
+  .search-container {
+    display: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+  }
+
+  .navbar-nav .nav-item:hover .search-input,
+  .search-input:focus {
+    width: 100%;
+
+  
+  }
+
+  .user-icon {
+  width: 10%; /* adjust size */
+  height: 32px; /* adjust size */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover; /* keeps aspect ratio */
+}
+
+/* ===============================
+   Filter Animation
+=============================== */
+[data-category] {
+  transition: var(--transition);
+}
+
+[data-category].hide {
+  opacity: 0;
+  transform: scale(0.95);
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+/* No Results Styling */
+#noResults {
+  min-height: 400px;
+}
